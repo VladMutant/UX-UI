@@ -1,0 +1,252 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header img {
+  height: 50px;
+}
+
+header nav {
+  display: flex;
+  gap: 10px;
+}
+
+header nav button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+header nav button:hover {
+  background-color: #e2e2e2;
+}
+
+main {
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+form button {
+  padding: 10px 15px;
+  background-color: #0a5669;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #084f58;
+}
+
+.intro-section,
+.content-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.intro-section img,
+.content-section img {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.intro-section .text,
+.content-section .text {
+  flex: 1;
+  padding: 20px;
+  background-color: #0a5669;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.activities-section {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f8f7f1;
+}
+
+.activities-section img {
+  width: 100%;
+  max-width: 200px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #0a5669;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+  bottom: auto;
+}
+
+footer .partners img {
+  max-width: 150px;
+  height: auto;
+}
+
+.ReservationsContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.ReservationsTitle {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.LoadingMessage {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.ReservationList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.ReservationCard {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: calc(100% - 40px);
+  max-width: 400px;
+  flex: 1 1 calc(50% - 20px);
+}
+
+.ReservationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.ReservationCard h2 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.ReservationCard p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.ReservationCard p strong {
+  color: #222;
+}
+
+
+@media (max-width: 390px) {
+  .ReservationsTitle {
+    font-size: 1.5rem;
+  }
+
+  .ReservationCard {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+/* Tablet (391px - 1024px) */
+@media (min-width: 391px) and (max-width: 1024px) {
+  .ReservationCard {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* Desktop (1025px and above) */
+@media (min-width: 1025px) {
+  .ReservationCard {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+
+  .ReservationsContainer {
+    max-width: 1200px;
+  }
+}
+
+/* Responsive Styles for (390x844, 1024x1366) */
+@media (max-width: 844px) {
+  .ReservationsContainer {
+    padding: 10px;
+  }
+
+  .ReservationCard {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  /* Adjustments for 1024x1366 */
+  header {
+    padding: 15px 30px;
+  }
+
+  .ReservationsContainer {
+    padding: 20px;
+    max-width: 1000px;
+  }
+
+}
